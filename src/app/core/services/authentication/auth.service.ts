@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { BaseService } from '../base.service';
 
 const routes = {
-  createAccount: 'user',
+  createAccount: 'user/',
   login: 'user/login/v2',
 };
 

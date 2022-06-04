@@ -18,7 +18,7 @@ export class NoteService extends BaseService<any> {
   }
 
   createNote(payload: any): Observable<any> {
-    return this.sendPost(this.baseUrl(`${routes.note}`), payload);
+    return this.sendPost(this.baseUrl(`${routes.note}/`), payload);
   }
 
   updateNote(id: any, payload: any): Observable<any> {
