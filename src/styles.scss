@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a {
+    color: #673ab7;
+    text-decoration: none;
+}
+
+.txt-purple {
+    color: #673ab7 !important;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+a:hover {
+    color: #673ab7;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .img-section {
+        display: none;
+    }
+
+    .form-section {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+
+}

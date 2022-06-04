@@ -1,0 +1,56 @@
+
+mat-card {
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+mat-card:hover {
+    transform: scale(1.1);
+}
+
+.main {
+    padding: 5rem;
+}
+
+.edit-btn {
+    color: #673ab7;
+}
+
+.sz-smll {
+    font-size: 10px;
+}
+
+.content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    display:inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20ch;
+}
+
+.delete-btn {
+    color: orangered;
+}
+
+@media screen and (max-width: 768px) {
+    mat-card-actions {
+        display: flex !important;
+        button {
+            width: 100px !important;
+        }
+    }
+
+    .main {
+        padding: 2rem !important;
+    }
+}

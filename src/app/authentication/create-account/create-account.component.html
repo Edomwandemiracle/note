@@ -1,0 +1,54 @@
+<div class="main vh100">
+    <div class="d-flex vh100">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 img-section"></div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 form-section">
+            <form [formGroup]="createAccountForm" (ngSubmit)="submit()">
+                <div>
+                    <h1 class="mb-0">Get Started</h1>
+                    <p class="mb-4">Create your account here</p>
+                </div>
+
+                <div class="mb-4">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Enter your firstname</mat-label>
+                      <input matInput placeholder="John" formControlName="first_name" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="mb-4">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Enter your lastname</mat-label>
+                      <input matInput placeholder="Doe" formControlName="last_name" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="mb-4">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Enter your email</mat-label>
+                      <input matInput placeholder="johndoe@mail.com" formControlName="email" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+
+                <div class="mt-5">
+                    <button [disabled]="createAccountForm.invalid" mat-raised-button color="primary">Submit</button>
+                </div>
+                <div class="pt-3">
+                    <p>Already have an account ? <a routerLink="/auth/login">Proceed to Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+  
