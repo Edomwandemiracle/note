@@ -26,7 +26,7 @@ export class AuthGuard implements CanActivate {
     if (this.credentialsService.isAuthenticated()) {
       return true;
     } else {
-      this.notifyService.publishMessages('Kindly login to proceed', 'warning', 1);
+      // this.notifyService.publishMessages('Kindly login to proceed', 'warning', 1);
       this.credentialsService.setCredentials();
       localStorage.clear();
       sessionStorage.clear();

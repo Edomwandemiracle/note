@@ -8,7 +8,6 @@ import { HttpErrorInterceptor } from './core/interceptors/Base/http-interceptor'
 import { TokenInterceptor } from './core/interceptors/Token/token';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material.module';
-import { DeleteDialogComponent } from './landing-page/delete-dialog/delete-dialog.component';
 
 @NgModule({
   declarations: [

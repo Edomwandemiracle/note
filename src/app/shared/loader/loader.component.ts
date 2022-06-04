@@ -8,9 +8,10 @@ import { LoaderService } from '../../core/loader/loader.service';
   styleUrls: ['./loader.component.css']
 })
 export class LoaderComponent implements OnInit {
-  organizationLogo:any;
-  loaderTxt:string = "Please Wait";
-  status:any;
+  loader: any;
+  loaderTxt: string = "Please Wait";
+  status: any;
+
   constructor(private loaderService:LoaderService) { }
 
   ngOnInit() {
@@ -18,7 +19,7 @@ export class LoaderComponent implements OnInit {
       res => {
         this.status = res['show'];
         if(this.status){
-          this.organizationLogo = environment.productLogoLarge;
+          this.loader = environment.loader;
         }
       }
     )

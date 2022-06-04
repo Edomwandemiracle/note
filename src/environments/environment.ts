@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   serverUrl: 'https://note-xyz.herokuapp.com/api/v1/',
-  productLogoLarge: 'assets/images/loader.gif'
+  loader: 'assets/images/loader.gif'
 };
 
 /*

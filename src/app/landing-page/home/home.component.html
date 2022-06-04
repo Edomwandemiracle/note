@@ -29,8 +29,11 @@
                   <p class="text-end sz-smll">{{ note?.created | date }}</p>
                 </mat-card-content>
                 <mat-card-actions>
-                  <button mat-button class="edit-btn" (click)="edit(note.id)">VIEW</button>
-                  <button mat-button class="delete-btn" (click)="openDialog(note)">DELETE</button>
+                  <!-- <button mat-button class="edit-btn" (click)="edit(note.id)">VIEW</button> -->
+                  <!-- <button mat-button class="delete-btn" (click)="openDialog(note)">DELETE</button> -->
+                  <mat-icon (click)="edit(note.id)" class="edit-btn pointer" aria-hidden="false" aria-label="Example home icon">edit</mat-icon> 
+                    &nbsp; &nbsp; &nbsp;
+                  <mat-icon (click)="openDialog(note)" class="delete-btn pointer" aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
                 </mat-card-actions>
               </mat-card>
         </div>
